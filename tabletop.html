@@ -1,0 +1,81 @@
+<head>
+  <title>Table Top</title>
+</head>
+
+<body>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+	<a class="brand" href="/">Table Top</a>
+        <ul class="nav pull-right">
+          <!-- li><a data-toggle="modal" href="#login-modal" data-keyboard="true">Login</a></li -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="login-modal" class="modal hide">
+    <div class="modal-header">
+      <a href="#" class="close">&times;</a>
+      <h3>Login</h3>
+    </div>
+    <div class="modal-body">
+      <p>
+	<a href="/auth/twitter"><img src="/assets/twitter.png" alt="Twitter" /></a>
+	<a href="/auth/google_oauth2"><img src="/assets/google.png" alt="Google" /></a>
+      </p>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span6">
+
+	<div class="tabbable">
+	  <ul class="nav nav-tabs">
+	    <li class="active"><a href="#tab1" data-toggle="tab">IC</a></li>
+	    <li><a href="#tab2" data-toggle="tab">OOC</a></li>
+	    <li><a href="#tab3" data-toggle="tab">PM</a></li>
+	  </ul>
+	  <div class="tab-content">
+	    <div class="tab-pane active" id="tab1">
+	      <div class="messages">
+	      </div>
+	    </div>
+	    <div class="tab-pane" id="tab2">
+	      <div class="messages">
+	      </div>
+	    </div>
+	    <div class="tab-pane" id="tab3">
+	      <div class="messages">
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	{{> messages-input}}
+      </div>
+      <div class="span6">
+	<div id="canvas"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<template name="messages-input">
+  <div id="chatInput">
+    <form id="messageForm">
+      <input id="messageInput" placeholder="Type your mesage and press enter..."  autocomplete="off" >
+    </form>
+  </div>
+</template>
+
+<template name="message">
+  <p class="messageRow">
+    <span class="timestamp">{{pretty_ts timestamp}}</span>
+    <strong>{{nick}}:</strong>
+    {{body}}
+  </p>
+</template>
+

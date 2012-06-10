@@ -1,0 +1,52 @@
+/* CSS declarations go here */
+td {
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.brand {
+    font-family: verdana,arial,helvetica,sans-serif;
+}
+
+.row-fluid {
+    padding-top: 50px;
+}
+
+#chatInput{
+    position: absolute;
+    height: 50px;
+    left: 10px;
+    right: 50%;
+    bottom: 0;
+}
+
+#messageInput {
+    width: 97%;
+}
+
+#messages-defunkt {
+    position: absolute;
+    bottom: 60px;
+    top: 50px;
+    right: 50%;
+    left: 10px;
+}
+
+.messageRow {
+    width: 100%;
+}
+
+.messages {
+    width: 100%;
+    height: 700px;
+}
+
+.messagesInner {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+}
